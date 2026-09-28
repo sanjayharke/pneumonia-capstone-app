@@ -1,0 +1,26 @@
+{
+  "intended_use": "Academic lung-opacity classification study",
+  "out_of_scope": [
+    "Clinical diagnosis",
+    "Autonomous treatment",
+    "Validated lesion localization"
+  ],
+  "training_data": "Learner-supplied DICOM/CSV dataset; see private source hashes and split manifest",
+  "selected_model": "densenet121_custom",
+  "selection_rule": "Maximum validation AP; ties: fewer parameters then name",
+  "evaluation_limitations": "Previously observed internal evaluation set; external validation pending",
+  "experiments": 17,
+  "seed": 42,
+  "weights_sha256": "29648d9fbd741ee1aebb188ae7630f125836f8420964583daeb2bd73431bbb5f",
+  "input_domain": "DICOM; raster inputs exploratory",
+  "latency": {
+    "device": "cpu",
+    "batch_size": 1,
+    "warmup": 3,
+    "repeats": 20,
+    "torch_threads": 4,
+    "median_ms": 71.15172850171803,
+    "p95_ms": 76.38210560071457,
+    "scope": "Model forward only; excludes decoding, network and UI"
+  }
+}

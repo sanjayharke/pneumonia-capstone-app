@@ -1,0 +1,53 @@
+{
+  "model_name": "densenet121_custom",
+  "run_mode": "full",
+  "calibration_a": 0.6949807693505655,
+  "calibration_b": -0.9092679325983463,
+  "threshold": 0.3338311123751774,
+  "positive_class": "Lung Opacity",
+  "negative_classes": [
+    "Normal",
+    "No Lung Opacity / Not Normal"
+  ],
+  "input_size": 224,
+  "preprocessing": "modality+VOI+polarity+per-image-minmax+letterbox",
+  "selection": {
+    "model_name": "densenet121_custom",
+    "criterion": "Maximum validation AP; ties: fewer parameters then name",
+    "holdout_used": false,
+    "run_mode": "full"
+  },
+  "versions": {
+    "torch": "2.11.0",
+    "torchvision": "0.26.0",
+    "pydicom": "3.0.2",
+    "Pillow": "11.3.0",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.16.1",
+    "tqdm": "4.67.3",
+    "streamlit": "1.45.1",
+    "reportlab": "5.0.1",
+    "nbconvert": "7.17.1",
+    "nbformat": "5.10.4",
+    "flask": "3.1.3",
+    "waitress": "3.0.2",
+    "requests": "2.32.5",
+    "ipython": "9.12.0"
+  },
+  "seed": 42,
+  "evaluation_status": "Previously observed internal evaluation set; external validation pending",
+  "weights_sha256": "29648d9fbd741ee1aebb188ae7630f125836f8420964583daeb2bd73431bbb5f",
+  "model_only_cpu_latency": {
+    "device": "cpu",
+    "batch_size": 1,
+    "warmup": 3,
+    "repeats": 20,
+    "torch_threads": 4,
+    "median_ms": 71.15172850171803,
+    "p95_ms": 76.38210560071457,
+    "scope": "Model forward only; excludes decoding, network and UI"
+  }
+}

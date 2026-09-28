@@ -1,0 +1,6 @@
+.git
+__pycache__
+*.dcm
+*.ipynb
+.DS_Store
+.env

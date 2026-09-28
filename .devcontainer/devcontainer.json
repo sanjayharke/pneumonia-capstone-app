@@ -1,0 +1,16 @@
+{
+  "name": "Pneumonia capstone",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "forwardPorts": [
+    8501
+  ],
+  "portsAttributes": {
+    "8501": {
+      "label": "Streamlit capstone",
+      "onAutoForward": "notify"
+    }
+  }
+}
